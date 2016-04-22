@@ -14,7 +14,7 @@ remote_user="root"
 remote_backup_dir="/var/opt/gitlab/backups/"
 
 # 创建备份
-echo `date +"%F %H:%m:%S"` 开始备份...
+echo `date +"%F %H:%M:%S"` 开始备份...
 
 echo $rakeBackup ...
 
@@ -22,8 +22,6 @@ $rakeBackup
 
 # 进入备份目录
 cd $backup_dir
-
-ls -ltr > /tmp/test_gitlab.log
 
 # 读取一天内新创建的文件，发送到备份机
 
@@ -43,6 +41,6 @@ done
 
 echo 发送完成！
 
-echo `date +"%F %H:%m:%S"` 备份完成...
+echo `date +"%F %H:%M:%S"` 备份完成...
 
 exit 0
