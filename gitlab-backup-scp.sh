@@ -14,7 +14,7 @@ remote_user="root"
 remote_backup_dir="/var/opt/gitlab/backups/"
 
 # 创建备份
-date +"%F %H:%m:%S" 开始备份...
+echo `date +"%F %H:%m:%S"` 开始备份...
 
 echo $rakeBackup ...
 
@@ -43,6 +43,6 @@ done
 
 echo 发送完成！
 
-date +"%F %H:%m:%S" 备份完成...
+echo `date +"%F %H:%m:%S"` 备份完成...
 
 exit 0
